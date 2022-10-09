@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 50px 700px 400px 400px 300px 20px;
+    grid-template-areas: "nav nav nav nav nav nav"
+                          "type type type type type type"
+                          "seller seller seller seller seller seller"
+                          "offer offer offer offer offer offer"
+                          "contact contact contact contact contact contact"
+                          "foot foot foot foot foot foot";
+    gap:0px 10px;
+    position: relative;
+}
+/*****************************nav style*************************/
+nav{
+    grid-area: nav;
+    background-color: mediumslateblue;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "logo logo navbar navbar navbar navbar";
+    position: sticky;
+    top: 0px;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    margin-left: 40px;
+    font-family: cursive;
+    
+}
+.logo span{
+    color: rgb(255, 166, 64);
+}
+.navbar{
+    grid-area: navbar;
+    background-color: transparent;
+    color: #fff;
+    text-align: right;
+    
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+/******************nav end style*************/
+/***********arrow************/
+.up{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color:rgb(255, 166, 64);
+    padding: 13px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+    position: fixed;
+    top:590px;
+    left: 1280px;
+}
+/***********arrow*************/
+/******************type stylw*************/
+.types{
+    grid-area: type;
+    background-color: #eee;
+    color: rgb(110, 107, 107);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    
+    
+}
+.types .book{
+    width: calc(100%/2);
+    text-align: center;
+}
+.types img{
+    width: 200px;
+   height: 200px;
+   border-radius: 15px;
+}
+.types p{
+    font-size: 20px;
+    margin: 10px;
+}
+.types button{
+    background-color: transparent;
+    padding: 5px 10px;
+    color: mediumslateblue;
+    border: 1px solid mediumslateblue;
+    cursor: pointer;
+}
+/*********************type end style***********************/
+/*********************seller style*************************/
+.seller{
+    grid-area: seller;
+    background-color: transparent;
+    color: gray;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 350px;
+    grid-template-areas: "head head head"
+                         "sell1 sell2 sell3";
+}
+.seller h3{
+    grid-area: head;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 30px;
+}
+.seller .sell1{
+    grid-area: sell1;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.seller .sell2{
+    grid-area: sell2;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.seller .sell3{
+    grid-area: sell3;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.seller img{
+        width: 200px;
+        height: 200px;
+}
+.seller button{
+    background-color: transparent;
+    padding: 5px 10px;
+    color: rgb(255, 166, 64);
+    border: 1px solid rgb(255, 166, 64);
+    cursor: pointer;
+    margin-top: 20px;
+}
+/*********************seller end style********************/
+/*********************offer ******************************/
+
+.offer{
+    grid-area: offer;
+    background-color:#eee ;
+    color:gray;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 50px 350px;
+    grid-template-areas: "head head head head"
+                         "off1 off2 off3 off4";
+}
+.offer h3{
+    grid-area: head;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+.offer .off1{
+    grid-area: off1;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.offer .off2{
+    grid-area: off2;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.offer .off3{
+    grid-area: off3;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.offer .off4{
+    grid-area: off4;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.offer img{
+        width: 150px;
+        height: 200px;
+}
+.offer button{
+    background-color: transparent;
+    padding: 5px 10px;
+    color: mediumslateblue;
+    border: 1px solid mediumslateblue;
+    cursor: pointer;
+    margin-top: 20px;
+}
+/*********************end offer************************/
+.contact{
+    grid-area: contact;
+    background-color: rgb(205, 83, 3);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.contact .social{
+    width: calc(100%/2);
+    padding-left: 100px;
+}
+.contact .social h4{
+    font-size: 20px;
+    padding: 20px 20px 20px 0;
+}
+.contact .social p{
+    padding: 5px;
+}
+.contact .social button{
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-top: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+
+
+/*******************footer*************************/
+.foot{
+    grid-area: foot;
+    background-color: transparent;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 3px;
+}
